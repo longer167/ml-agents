@@ -22,7 +22,8 @@ package_pack_-_ml-agents:
       paths:
       - upm-ci~/packages/**/*
   dependencies:
-  - path: .yamato/build-on-mac.yml#build
+  - path: .yamato/standalone-build-test.yml#test_linux_standalone_2023.2_gym
+
   variables:
     UPMCI_ACK_LARGE_PACKAGE: 1
     UPMPVP_CONTEXT_WRENCH: 0.10.4.0
