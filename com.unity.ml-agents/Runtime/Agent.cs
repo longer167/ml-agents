@@ -695,7 +695,6 @@ namespace Unity.MLAgents
         /// Returns the number of episodes that the Agent has completed (either <see cref="Agent.EndEpisode()"/>
         /// was called, or maxSteps was reached).
         /// </summary>
-        /// <returns>The current episode count.</returns>
         public int CompletedEpisodes
         {
             get { return m_CompletedEpisodes; }
@@ -818,7 +817,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Internal method to end the episode and reset the Agent.
         /// </summary>
-        /// <param name="reason"></param>
+        /// <param name="reason">reason to end the episode.</param>
         void EndEpisodeAndReset(DoneReason reason)
         {
             NotifyAgentDone(reason);

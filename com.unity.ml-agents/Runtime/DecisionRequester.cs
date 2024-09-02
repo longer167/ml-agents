@@ -115,7 +115,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Whether Agent.RequestDecision should be called on this update step.
         /// </summary>
-        /// <param name="context"></param>
+        /// <param name="context">`RequestDecision` context.</param>
         /// <returns>True if the agent `RequestDecision` should be called on this update step, False if not.</returns>
         protected virtual bool ShouldRequestDecision(DecisionRequestContext context)
         {
@@ -125,7 +125,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Whether Agent.RequestAction should be called on this update step.
         /// </summary>
-        /// <param name="context"></param>
+        /// <param name="context">`RequestDecision` context.</param>
         /// <returns>True if the agent `RequestAction` should be called on this update step, False if not.</returns>
         protected virtual bool ShouldRequestAction(DecisionRequestContext context)
         {

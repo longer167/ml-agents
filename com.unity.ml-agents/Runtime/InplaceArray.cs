@@ -24,7 +24,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Create a length-1 array.
         /// </summary>
-        /// <param name="elem0"></param>
+        /// <param name="elem0">Length of axis 0.</param>
         public InplaceArray(T elem0)
         {
             m_Length = 1;
@@ -37,8 +37,8 @@ namespace Unity.MLAgents
         /// <summary>
         /// Create a length-2 array.
         /// </summary>
-        /// <param name="elem0"></param>
-        /// <param name="elem1"></param>
+        /// <param name="elem0">Length of axis 0.</param>
+        /// <param name="elem1">Length of axis 1.</param>
         public InplaceArray(T elem0, T elem1)
         {
             m_Length = 2;
@@ -51,9 +51,9 @@ namespace Unity.MLAgents
         /// <summary>
         /// Create a length-3 array.
         /// </summary>
-        /// <param name="elem0"></param>
-        /// <param name="elem1"></param>
-        /// <param name="elem2"></param>
+        /// <param name="elem0">Length of axis 0.</param>
+        /// <param name="elem1">Length of axis 1.</param>
+        /// <param name="elem2">Length of axis 2.</param>
         public InplaceArray(T elem0, T elem1, T elem2)
         {
             m_Length = 3;
@@ -66,10 +66,10 @@ namespace Unity.MLAgents
         /// <summary>
         /// Create a length-3 array.
         /// </summary>
-        /// <param name="elem0"></param>
-        /// <param name="elem1"></param>
-        /// <param name="elem2"></param>
-        /// <param name="elem3"></param>
+        /// <param name="elem0">Length of axis 0.</param>
+        /// <param name="elem1">Length of axis 1.</param>
+        /// <param name="elem2">Length of axis 2.</param>
+        /// <param name="elem3">Length of axis 3.</param>
         public InplaceArray(T elem0, T elem1, T elem2, T elem3)
         {
             m_Length = 4;
@@ -106,7 +106,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Per-element access.
         /// </summary>
-        /// <param name="index"></param>
+        /// <param name="index">The index to get or set.</param>
         /// <exception cref="IndexOutOfRangeException"></exception>
         public T this[int index]
         {
@@ -192,8 +192,8 @@ namespace Unity.MLAgents
         /// <summary>
         /// Check that the arrays have the same length and have all equal values.
         /// </summary>
-        /// <param name="lhs"></param>
-        /// <param name="rhs"></param>
+        /// <param name="lhs">The first 'InplaceArray' to compare.</param>
+        /// <param name="rhs">The second 'InplaceArray' to compare.</param>
         /// <returns>Whether the arrays are equivalent.</returns>
         public static bool operator ==(InplaceArray<T> lhs, InplaceArray<T> rhs)
         {
@@ -203,22 +203,22 @@ namespace Unity.MLAgents
         /// <summary>
         /// Check that the arrays are not equivalent.
         /// </summary>
-        /// <param name="lhs"></param>
-        /// <param name="rhs"></param>
+        /// <param name="lhs">The first 'InplaceArray' to compare.</param>
+        /// <param name="rhs">The second 'InplaceArray' to compare.</param>
         /// <returns>Whether the arrays are not equivalent</returns>
         public static bool operator !=(InplaceArray<T> lhs, InplaceArray<T> rhs) => !lhs.Equals(rhs);
 
         /// <summary>
         /// Check that the arrays are equivalent.
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="other">The other 'InplaceArray' to compare.</param>
         /// <returns>Whether the arrays are not equivalent</returns>
         public override bool Equals(object other) => other is InplaceArray<T> other1 && this.Equals(other1);
 
         /// <summary>
         /// Check that the arrays are equivalent.
         /// </summary>
-        /// <param name="other"></param>
+        /// <param name="other">The other 'InplaceArray' to compare.</param>
         /// <returns>Whether the arrays are not equivalent</returns>
         public bool Equals(InplaceArray<T> other)
         {

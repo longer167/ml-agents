@@ -106,8 +106,8 @@ namespace Unity.MLAgents.Integrations.Match3
         /// This should be between 0 and BoardSize.NumSpecialTypes (inclusive).
         /// The actual order of the values doesn't matter.
         /// </summary>
-        /// <param name="row"></param>
-        /// <param name="col"></param>
+        /// <param name="row">The row index.</param>
+        /// <param name="col">The collunm index.</param>
         /// <returns>The special type of the piece at the give row and column.</returns>
         public abstract int GetSpecialType(int row, int col);
 
@@ -193,7 +193,7 @@ namespace Unity.MLAgents.Integrations.Match3
         /// 3 or more cells of the same type in a row. This assumes that all pieces are allowed
         /// to be moved; to add extra logic, incorporate it into your <see cref="IsMoveValid"/> method.
         /// </summary>
-        /// <param name="move"></param>
+        /// <param name="move">The `Move`.</param>
         /// <returns>True if swapping the cells would result in 3 or more cells of the same type in a row.</returns>
         public bool SimpleIsMoveValid(Move move)
         {

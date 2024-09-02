@@ -410,7 +410,6 @@ namespace Unity.MLAgents
         /// Returns the <see cref="StatsRecorder"/> instance. This instance can be used
         /// to record any statistics from the Unity environment.
         /// </summary>
-        /// <returns>The `StatsRecorder` instance.</returns>
         public StatsRecorder StatsRecorder
         {
             get { return m_StatsRecorder; }
@@ -537,9 +536,6 @@ namespace Unity.MLAgents
         /// <summary>
         /// The current step count (within the current episode).
         /// </summary>
-        /// <value>
-        /// Current step count.
-        /// </value>
         public int StepCount
         {
             get { return m_StepCount; }
@@ -548,9 +544,6 @@ namespace Unity.MLAgents
         /// <summary>
         /// Returns the total step count.
         /// </summary>
-        /// <value>
-        /// Total step count.
-        /// </value>
         public int TotalStepCount
         {
             get { return m_TotalStepCount; }
