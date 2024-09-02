@@ -135,7 +135,7 @@ namespace Unity.MLAgents.Integrations.Match3
         /// By default, EvalMovePoints() returns 1, so all valid moves are equally likely. Inherit from this class and
         /// override EvalMovePoints() to use your game's scoring as a better estimate.
         /// </remarks>
-        /// <returns></returns>
+        /// <returns>Valid mode.</returns>
         internal int GreedyMove()
         {
             var bestMoveIndex = 0;

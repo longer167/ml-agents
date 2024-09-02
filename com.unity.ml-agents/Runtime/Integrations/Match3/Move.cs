@@ -66,7 +66,7 @@ namespace Unity.MLAgents.Integrations.Match3
         /// </summary>
         /// <param name="moveIndex">Must be between 0 and NumPotentialMoves(maxRows, maxCols).</param>
         /// <param name="maxBoardSize"></param>
-        /// <returns></returns>
+        /// <returns>Corresponding `Move`.</returns>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static Move FromMoveIndex(int moveIndex, BoardSize maxBoardSize)
         {
@@ -147,7 +147,7 @@ namespace Unity.MLAgents.Integrations.Match3
         /// <param name="col"></param>
         /// <param name="dir"></param>
         /// <param name="maxBoardSize"></param>
-        /// <returns></returns>
+        /// <returns>Corresponding `Move`.</returns>
         public static Move FromPositionAndDirection(int row, int col, Direction dir, BoardSize maxBoardSize)
         {
             // Check for out-of-bounds
@@ -209,7 +209,7 @@ namespace Unity.MLAgents.Integrations.Match3
         /// This will be passed the return value from AbstractBoard.GetCurrentBoardSize().
         /// </summary>
         /// <param name="boardSize"></param>
-        /// <returns></returns>
+        /// <returns>True if move is valide given input `boardSize`, False if not.</returns>
         public bool InRangeForBoard(BoardSize boardSize)
         {
             var (otherRow, otherCol) = OtherCell();
@@ -222,7 +222,7 @@ namespace Unity.MLAgents.Integrations.Match3
         /// <summary>
         /// Get the other row and column that correspond to this move.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Corresponding other (row, column) tuple for this move.</returns>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public (int Row, int Column) OtherCell()
         {
@@ -244,7 +244,7 @@ namespace Unity.MLAgents.Integrations.Match3
         /// <summary>
         /// Get the opposite direction of this move.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Oposit `Direction` of this move.</returns>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public Direction OtherDirection()
         {
@@ -268,7 +268,7 @@ namespace Unity.MLAgents.Integrations.Match3
         /// This is equivalent to the number of internal edges in the board.
         /// </summary>
         /// <param name="maxBoardSize"></param>
-        /// <returns></returns>
+        /// <returns>Number of potential moves given a boardsize.</returns>
         public static int NumPotentialMoves(BoardSize maxBoardSize)
         {
             return maxBoardSize.Rows * (maxBoardSize.Columns - 1) + (maxBoardSize.Rows - 1) * (maxBoardSize.Columns);

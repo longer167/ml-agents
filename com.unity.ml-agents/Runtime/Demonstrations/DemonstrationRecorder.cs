@@ -150,7 +150,7 @@ namespace Unity.MLAgents.Demonstrations
         /// <param name="fileSystem"></param>
         /// <param name="demonstrationDirectory"></param>
         /// <param name="demonstrationName"></param>
-        /// <returns></returns>
+        /// <returns>Unique path.</returns>
         internal static string MakeDemonstrationFilePath(
             IFileSystem fileSystem, string demonstrationDirectory, string demonstrationName
         )

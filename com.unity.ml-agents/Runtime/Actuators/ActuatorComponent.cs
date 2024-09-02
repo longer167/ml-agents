@@ -19,7 +19,7 @@ namespace Unity.MLAgents.Actuators
         /// The specification of the possible actions for this ActuatorComponent.
         /// This must produce the same results as the corresponding IActuator's ActionSpec.
         /// </summary>
-        /// <seealso cref="ActionSpec"/>
+        /// <see cref="ActionSpec"/>
         public abstract ActionSpec ActionSpec { get; }
     }
 }

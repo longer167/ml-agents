@@ -228,9 +228,9 @@ namespace Unity.MLAgents
         /// Set to 0 for unlimited episode length.
         ///
         /// When an episode ends and a new one begins, the Agent object's
-        /// <seealso cref="OnEpisodeBegin"/> function is called. You can implement
+        /// <see cref="OnEpisodeBegin"/> function is called. You can implement
         /// <see cref="OnEpisodeBegin"/> to reset the agent or remove it from the
-        /// environment. An agent's episode can also end if you call its <seealso cref="EndEpisode"/>
+        /// environment. An agent's episode can also end if you call its <see cref="EndEpisode"/>
         /// method or an external process resets the environment through the <see cref="Academy"/>.
         ///
         /// Consider limiting the number of steps in an episode to avoid wasting time during
@@ -465,7 +465,7 @@ namespace Unity.MLAgents
         /// Initializes the agent. Can be safely called multiple times.
         /// </summary>
         /// <remarks>
-        /// This function calls your <seealso cref="Initialize"/> implementation, if one exists.
+        /// This function calls your <see cref="Initialize"/> implementation, if one exists.
         /// </remarks>
         public void LazyInitialize()
         {
@@ -560,7 +560,7 @@ namespace Unity.MLAgents
         /// }
         /// </code>
         /// </example>
-        /// <seealso cref="OnEnable"/>
+        /// <see cref="OnEnable"/>
         protected virtual void OnDisable()
         {
             DemonstrationWriters.Clear();
@@ -685,9 +685,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Returns the current step counter (within the current episode).
         /// </summary>
-        /// <returns>
-        /// Current step count.
-        /// </returns>
+        /// <returns>The current step count.</returns>
         public int StepCount
         {
             get { return m_StepCount; }
@@ -697,9 +695,7 @@ namespace Unity.MLAgents
         /// Returns the number of episodes that the Agent has completed (either <see cref="Agent.EndEpisode()"/>
         /// was called, or maxSteps was reached).
         /// </summary>
-        /// <returns>
-        /// Current episode count.
-        /// </returns>
+        /// <returns>The current episode count.</returns>
         public int CompletedEpisodes
         {
             get { return m_CompletedEpisodes; }
@@ -738,7 +734,7 @@ namespace Unity.MLAgents
         /// Increments the step and episode rewards by the provided value.
         /// </summary>
         /// <remarks>Use a positive reward to reinforce desired behavior. You can use a
-        /// negative reward to penalize mistakes. Use <seealso cref="SetReward(float)"/> to
+        /// negative reward to penalize mistakes. Use <see cref="SetReward(float)"/> to
         /// set the reward assigned to the current step with a specific value rather than
         /// increasing or decreasing it.
         ///
@@ -796,8 +792,8 @@ namespace Unity.MLAgents
         /// This should be used when the episode can no longer continue, such as when the Agent
         /// reaches the goal or fails at the task.
         /// </remarks>
-        /// <seealso cref="OnEpisodeBegin"/>
-        /// <seealso cref="EpisodeInterrupted"/>
+        /// <see cref="OnEpisodeBegin"/>
+        /// <see cref="EpisodeInterrupted"/>
         public void EndEpisode()
         {
             EndEpisodeAndReset(DoneReason.DoneCalled);
@@ -812,8 +808,8 @@ namespace Unity.MLAgents
         /// This should be used when the episode could continue, but has gone on for
         /// a sufficient number of steps.
         /// </remarks>
-        /// <seealso cref="OnEpisodeBegin"/>
-        /// <seealso cref="EndEpisode"/>
+        /// <see cref="OnEpisodeBegin"/>
+        /// <see cref="EndEpisode"/>
         public void EpisodeInterrupted()
         {
             EndEpisodeAndReset(DoneReason.MaxStepReached);
@@ -838,11 +834,11 @@ namespace Unity.MLAgents
         /// cannot use the decision every step, then you can request a decision less
         /// frequently.
         ///
-        /// You can add a <seealso cref="DecisionRequester"/> component to the agent's
+        /// You can add a <see cref="DecisionRequester"/> component to the agent's
         /// [GameObject] to drive the agent's decision making. When you use this component,
         /// do not call `RequestDecision()` separately.
         ///
-        /// Note that this function calls <seealso cref="RequestAction"/>; you do not need to
+        /// Note that this function calls <see cref="RequestAction"/>; you do not need to
         /// call both functions at the same time.
         ///
         /// [GameObject]: https://docs.unity3d.com/Manual/GameObjects.html
@@ -859,7 +855,7 @@ namespace Unity.MLAgents
         /// <remarks>
         /// Call `RequestAction()` to repeat the previous action returned by the agent's
         /// most recent decision. A new decision is not requested. When you call this function,
-        /// the Agent instance invokes <seealso cref="IActionReceiver.OnActionReceived"/> with the
+        /// the Agent instance invokes <see cref="IActionReceiver.OnActionReceived"/> with the
         /// existing action vector.
         ///
         /// You can use `RequestAction()` in situations where an agent must take an action
@@ -867,11 +863,11 @@ namespace Unity.MLAgents
         /// agent that moves through its environment might need to apply an action to keep
         /// moving, but only needs to make a decision to change course or speed occasionally.
         ///
-        /// You can add a <seealso cref="DecisionRequester"/> component to the agent's
+        /// You can add a <see cref="DecisionRequester"/> component to the agent's
         /// [GameObject] to drive the agent's decision making and action frequency. When you
         /// use this component, do not call `RequestAction()` separately.
         ///
-        /// Note that <seealso cref="RequestDecision"/> calls `RequestAction()`; you do not need to
+        /// Note that <see cref="RequestDecision"/> calls `RequestAction()`; you do not need to
         /// call both functions at the same time.
         ///
         /// [GameObject]: https://docs.unity3d.com/Manual/GameObjects.html
@@ -898,7 +894,7 @@ namespace Unity.MLAgents
         /// the Agent object needs references to other [GameObjects] in the scene, you
         /// can collect and store those references here.
         ///
-        /// Note that <seealso cref="OnEpisodeBegin"/> is called at the start of each of
+        /// Note that <see cref="OnEpisodeBegin"/> is called at the start of each of
         /// the agent's "episodes". You can use that function for items that need to be reset
         /// for each episode.
         ///
@@ -919,7 +915,7 @@ namespace Unity.MLAgents
         /// The same array will be reused between steps. It is up to the user to initialize
         /// the values on each call, for example by calling `Array.Clear(actionsOut, 0, actionsOut.Length);`.
         /// Add values to the array at the same indexes as they are used in your
-        /// <seealso cref="IActionReceiver.OnActionReceived"/> function, which receives this array and
+        /// <see cref="IActionReceiver.OnActionReceived"/> function, which receives this array and
         /// implements the corresponding agent behavior. See [Actions] for more information
         /// about agent actions.
         /// Note : Do not create a new float array of action in the `Heuristic()` method,
@@ -951,20 +947,20 @@ namespace Unity.MLAgents
         /// You can also use the [Input System package], which provides a more flexible and
         /// configurable input system.
         /// <code>
-        ///     public override void Heuristic(in ActionBuffers actionsOut)
-        ///     {
-        ///         var continuousActionsOut = actionsOut.ContinuousActions;
-        ///         continuousActionsOut[0] = Input.GetAxis("Horizontal");
-        ///         continuousActionsOut[1] = Input.GetKey(KeyCode.Space) ? 1.0f : 0.0f;
-        ///         continuousActionsOut[2] = Input.GetAxis("Vertical");
-        ///     }
+        /// public override void Heuristic(in ActionBuffers actionsOut)
+        /// {
+        ///    var continuousActionsOut = actionsOut.ContinuousActions;
+        ///    continuousActionsOut[0] = Input.GetAxis("Horizontal");
+        ///    continuousActionsOut[1] = Input.GetKey(KeyCode.Space) ? 1.0f : 0.0f;
+        ///    continuousActionsOut[2] = Input.GetAxis("Vertical");
+        /// }
         /// </code>
         /// [Input Manager]: https://docs.unity3d.com/Manual/class-InputManager.html
         /// [Input System package]: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/index.html
         /// </example>
         /// <param name="actionsOut">The <see cref="ActionBuffers"/> which contain the continuous and
         /// discrete action buffers to write to.</param>
-        /// <seealso cref="IActionReceiver.OnActionReceived"/>
+        /// <see cref="IActionReceiver.OnActionReceived"/>
         public virtual void Heuristic(in ActionBuffers actionsOut)
         {
             Debug.LogWarning("Heuristic method called but not implemented. Returning placeholder actions.");
@@ -1175,7 +1171,7 @@ namespace Unity.MLAgents
         /// implement a `CollectObservations()` function.
         ///
         /// Add vector observations to the <paramref name="sensor"/> parameter passed to
-        /// this method by calling the <seealso cref="VectorSensor"/> helper methods:
+        /// this method by calling the <see cref="VectorSensor"/> helper methods:
         ///     - <see cref="VectorSensor.AddObservation(int)"/>
         ///     - <see cref="VectorSensor.AddObservation(float)"/>
         ///     - <see cref="VectorSensor.AddObservation(Vector3)"/>
@@ -1240,7 +1236,7 @@ namespace Unity.MLAgents
         ///
         /// [Agents - Actions]: https://github.com/Unity-Technologies/ml-agents/blob/release_21_docs/docs/Learning-Environment-Design-Agents.md#actions
         /// </remarks>
-        /// <seealso cref="IActionReceiver.OnActionReceived"/>
+        /// <see cref="IActionReceiver.OnActionReceived"/>
         public virtual void WriteDiscreteActionMask(IDiscreteActionMask actionMask) { }
 
         /// <summary>
@@ -1248,7 +1244,7 @@ namespace Unity.MLAgents
         /// on the provided action.
         /// </summary>
         /// <remarks>
-        /// An action is passed to this function in the form of an  <seealso cref="ActionBuffers"/>.
+        /// An action is passed to this function in the form of an  <see cref="ActionBuffers"/>.
         /// Your implementation must use the array to direct the agent's behavior for the
         /// current step.
         ///
@@ -1258,7 +1254,7 @@ namespace Unity.MLAgents
         /// three values in ActionBuffers.ContinuousActions array to use as the force components.
         /// During training, the agent's  policy learns to set those particular elements of
         /// the array to maximize the training rewards the agent receives. (Of course,
-        /// if you implement a <seealso cref="Agent.Heuristic(in ActionBuffers)"/> function, it must use the same
+        /// if you implement a <see cref="Agent.Heuristic(in ActionBuffers)"/> function, it must use the same
         /// elements of the action array for the same purpose since there is no learning
         /// involved.)
         ///
@@ -1315,8 +1311,8 @@ namespace Unity.MLAgents
         /// Implement `OnEpisodeBegin()` to set up an Agent instance at the beginning
         /// of an episode.
         /// </summary>
-        /// <seealso cref="Initialize"/>
-        /// <seealso cref="EndEpisode"/>
+        /// <see cref="Initialize"/>
+        /// <see cref="EndEpisode"/>
         public virtual void OnEpisodeBegin() { }
 
         /// <summary>

@@ -101,7 +101,7 @@ namespace Unity.MLAgents.SideChannels
         /// <summary>
         /// Read the byte array of the message.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The byte array of the message.</returns>
         internal byte[] ToByteArray()
         {
             return m_Stream.ToArray();

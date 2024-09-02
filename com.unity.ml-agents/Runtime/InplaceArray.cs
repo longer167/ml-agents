@@ -84,7 +84,7 @@ namespace Unity.MLAgents
         /// The source must be non-empty and have at most 4 elements.
         /// </summary>
         /// <param name="elems"></param>
-        /// <returns></returns>
+        /// <returns>Corresponding `InplaceArray` from the input IList.</returns>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static InplaceArray<T> FromList(IList<T> elems)
         {
@@ -170,7 +170,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Returns a string representation of the array's elements.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The string summary of the `InplaceArray`.</returns>
         /// <exception cref="IndexOutOfRangeException"></exception>
         public override string ToString()
         {
@@ -231,7 +231,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Get a hashcode for the array.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The hashcode of the `InplaceArray`.</returns>
         public override int GetHashCode()
         {
             return (m_Elem0, m_Elem1, m_Elem2, m_Elem3, Length).GetHashCode();

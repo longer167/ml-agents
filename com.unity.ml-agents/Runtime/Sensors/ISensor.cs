@@ -114,7 +114,7 @@ namespace Unity.MLAgents.Sensors
         /// shape elements).
         /// </summary>
         /// <param name="sensor"></param>
-        /// <returns></returns>
+        /// <returns>The total number of elements in the `ISensor`'s observation.</returns>
         public static int ObservationSize(this ISensor sensor)
         {
             var obsSpec = sensor.GetObservationSpec();

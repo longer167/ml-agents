@@ -167,7 +167,7 @@ namespace Unity.MLAgents
         /// </summary>
         /// <param name="key">A key to identify which behavior actions to get.</param>
         /// <param name="agentId">A key to identify which Agent actions to get.</param>
-        /// <returns></returns>
+        /// <returns>`ActionBuffers` corresponding to the input key.</returns>
         ActionBuffers GetActions(string key, int agentId);
     }
 }

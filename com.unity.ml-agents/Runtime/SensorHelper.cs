@@ -17,7 +17,7 @@ namespace Unity.MLAgents.Sensors
         /// <param name="sensor"></param>
         /// <param name="expected"></param>
         /// <param name="errorMessage"></param>
-        /// <returns></returns>
+        /// <returns>True if the observations for the provided sensor equal the expected values, False if not.</returns>
         public static bool CompareObservation(ISensor sensor, float[] expected, out string errorMessage)
         {
             var numExpected = expected.Length;
@@ -79,7 +79,7 @@ namespace Unity.MLAgents.Sensors
         /// <param name="sensor"></param>
         /// <param name="expected"></param>
         /// <param name="errorMessage"></param>
-        /// <returns></returns>
+        /// <returns>True if the generated observation for the provided sensor equal the expected values, False if not.</returns>
         public static bool CompareObservation(ISensor sensor, float[,,] expected, out string errorMessage)
         {
             var tensorShape = new TensorShape(0, expected.GetLength(0), expected.GetLength(1), expected.GetLength(2));

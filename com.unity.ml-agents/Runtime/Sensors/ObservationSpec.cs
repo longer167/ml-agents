@@ -58,7 +58,7 @@ namespace Unity.MLAgents.Sensors
         /// </summary>
         /// <param name="length"></param>
         /// <param name="obsType"></param>
-        /// <returns></returns>
+        /// <returns>`ObservationSpec` for 1-D observations of the requested length.</returns>
         public static ObservationSpec Vector(int length, ObservationType obsType = ObservationType.Default)
         {
             return new ObservationSpec(
@@ -73,7 +73,7 @@ namespace Unity.MLAgents.Sensors
         /// </summary>
         /// <param name="obsSize"></param>
         /// <param name="maxNumObs"></param>
-        /// <returns></returns>
+        /// <returns>`ObservationSpec` for variable-length observations.</returns>
         public static ObservationSpec VariableLength(int obsSize, int maxNumObs)
         {
             var dimProps = new InplaceArray<DimensionProperty>(
@@ -94,7 +94,7 @@ namespace Unity.MLAgents.Sensors
         /// <param name="width"></param>
         /// <param name="channels"></param>
         /// <param name="obsType"></param>
-        /// <returns></returns>
+        /// <returns>`ObservationSpec` for visual-like observations</returns>
         public static ObservationSpec Visual(int channels, int height, int width, ObservationType obsType = ObservationType.Default)
         {
             var dimProps = new InplaceArray<DimensionProperty>(

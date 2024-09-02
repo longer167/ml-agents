@@ -136,7 +136,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Reports whether or not the communicator is on.
         /// </summary>
-        /// <seealso cref="ICommunicator"/>
+        /// <see cref="ICommunicator"/>
         /// <value>
         /// <c>True</c>, if communicator is on, <c>false</c> otherwise.
         /// </value>
@@ -400,7 +400,7 @@ namespace Unity.MLAgents
         /// then the values of the parameters generated from the training process can be
         /// retrieved here.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The `EnvironmentParameters` instance.</returns>
         public EnvironmentParameters EnvironmentParameters
         {
             get { return m_EnvironmentParameters; }
@@ -410,7 +410,7 @@ namespace Unity.MLAgents
         /// Returns the <see cref="StatsRecorder"/> instance. This instance can be used
         /// to record any statistics from the Unity environment.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The `StatsRecorder` instance.</returns>
         public StatsRecorder StatsRecorder
         {
             get { return m_StatsRecorder; }

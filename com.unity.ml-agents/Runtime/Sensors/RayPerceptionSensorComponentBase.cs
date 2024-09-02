@@ -188,13 +188,13 @@ namespace Unity.MLAgents.Sensors
         /// <summary>
         /// Returns the <see cref="RayPerceptionCastType"/> for the associated raycast sensor.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>`RayPerceptionCastType` for the associated raycast sensor.</returns>
         public abstract RayPerceptionCastType GetCastType();
 
         /// <summary>
         /// Returns the amount that the ray start is offset up or down by.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The amount that the ray start is offset up or down by.</returns>
         public virtual float GetStartVerticalOffset()
         {
             return 0f;
@@ -203,7 +203,7 @@ namespace Unity.MLAgents.Sensors
         /// <summary>
         /// Returns the amount that the ray end is offset up or down by.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The amount that the ray end is offset up or down by.</returns>
         public virtual float GetEndVerticalOffset()
         {
             return 0f;
@@ -212,7 +212,7 @@ namespace Unity.MLAgents.Sensors
         /// <summary>
         /// Returns an initialized raycast sensor.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Initialized `ISensor` array.</returns>
         public override ISensor[] CreateSensors()
         {
             var rayPerceptionInput = GetRayPerceptionInput();
@@ -240,7 +240,7 @@ namespace Unity.MLAgents.Sensors
         /// Should be deprecated with a future major version release (doing so will break existing
         /// models).
         /// </param>
-        /// <returns></returns>
+        /// <returns>The corresponding ray angles.</returns>
         internal static float[] GetRayAnglesAlternating(int raysPerDirection, float maxRayDegrees)
         {
             // Example:
@@ -267,7 +267,7 @@ namespace Unity.MLAgents.Sensors
         /// Orders the rays from the left-most to the right-most which makes using a convolution
         /// in the model easier.
         /// </param>
-        /// <returns></returns>
+        /// <returns>The corresponding ray angles.</returns>
         internal static float[] GetRayAngles(int raysPerDirection, float maxRayDegrees)
         {
             // Example:
@@ -286,7 +286,7 @@ namespace Unity.MLAgents.Sensors
         /// <summary>
         /// Get the RayPerceptionInput that is used by the <see cref="RayPerceptionSensor"/>.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>`RayPerceptionInput` that is used by the sensor.</returns>
         public RayPerceptionInput GetRayPerceptionInput()
         {
             var rayAngles = m_AlternatingRayOrder ?

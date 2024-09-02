@@ -8,13 +8,13 @@ namespace Unity.MLAgents.Actuators
         /// <summary>
         /// The specification of the actions for this IActuator.
         /// </summary>
-        /// <seealso cref="ActionSpec"/>
+        /// <see cref="ActionSpec"/>
         ActionSpec ActionSpec { get; }
 
         /// <summary>
         /// Gets the name of this IActuator which will be used to sort it.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>The string name of this `IActuator`</returns>
         string Name { get; }
 
         /// <summary>
@@ -33,7 +33,7 @@ namespace Unity.MLAgents.Actuators
         /// Returns the number of discrete branches + the number of continuous actions.
         /// </summary>
         /// <param name="actuator"></param>
-        /// <returns></returns>
+        /// <returns>The number possible actions.</returns>
         public static int TotalNumberOfActions(this IActuator actuator)
         {
             return actuator.ActionSpec.NumContinuousActions + actuator.ActionSpec.NumDiscreteActions;
