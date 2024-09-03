@@ -83,7 +83,7 @@ namespace Unity.MLAgents
         /// Construct an InplaceArray from an IList (e.g. Array or List).
         /// The source must be non-empty and have at most 4 elements.
         /// </summary>
-        /// <param name="elems"></param>
+        /// <param name="elems">The `IList` to construct the array from.</param>
         /// <returns>Corresponding `InplaceArray` from the input IList.</returns>
         /// <exception cref="ArgumentOutOfRangeException"></exception>
         public static InplaceArray<T> FromList(IList<T> elems)
