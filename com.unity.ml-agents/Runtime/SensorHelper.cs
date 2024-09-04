@@ -76,7 +76,7 @@ namespace Unity.MLAgents.Sensors
         /// This should not generally be used in production code. It is only intended for
         /// simplifying unit tests.
         /// </summary>
-        /// <param name="sensor"></param>
+        /// <param name="sensor">`ISensor` to generate observation from.</param>
         /// <param name="expected"></param>
         /// <param name="errorMessage"></param>
         /// <returns>True if the generated observation for the provided sensor equal the expected values, False if not.</returns>
