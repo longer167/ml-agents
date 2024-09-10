@@ -239,9 +239,11 @@ namespace Unity.MLAgents
         /// reset and start a new training episode rather than continue to fail.
         /// </remarks>
         /// <example>
+        /// <para>
         /// To use a step limit when training while allowing agents to run without resetting
         /// outside of training, you can set the max step to 0 in <see cref="Initialize"/>
         /// if the <see cref="Academy"/> is not connected to an external process.
+        /// <para>
         /// <code>
         /// using Unity.MLAgents;
         ///

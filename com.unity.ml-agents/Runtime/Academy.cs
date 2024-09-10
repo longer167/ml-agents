@@ -136,7 +136,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Reports whether or not the communicator is on.
         /// </summary>
-        /// <see cref="ICommunicator"/>
+        /// <seealso cref="ICommunicator"/>
         /// <value>
         /// <c>True</c>, if communicator is on, <c>false</c> otherwise.
         /// </value>
@@ -400,7 +400,7 @@ namespace Unity.MLAgents
         /// then the values of the parameters generated from the training process can be
         /// retrieved here.
         /// </summary>
-        /// <returns>The `EnvironmentParameters` instance.</returns>
+        /// <value>The `EnvironmentParameters` instance.</value>
         public EnvironmentParameters EnvironmentParameters
         {
             get { return m_EnvironmentParameters; }
