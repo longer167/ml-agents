@@ -56,8 +56,8 @@ namespace Unity.MLAgents.Sensors
         /// <summary>
         /// Construct an ObservationSpec for 1-D observations of the requested length.
         /// </summary>
-        /// <param name="length"></param>
-        /// <param name="obsType"></param>
+        /// <param name="length">Length</param>
+        /// <param name="obsType">Observation type</param>
         /// <returns>`ObservationSpec` for 1-D observations of the requested length.</returns>
         public static ObservationSpec Vector(int length, ObservationType obsType = ObservationType.Default)
         {
@@ -71,8 +71,8 @@ namespace Unity.MLAgents.Sensors
         /// <summary>
         /// Construct an ObservationSpec for variable-length observations.
         /// </summary>
-        /// <param name="obsSize"></param>
-        /// <param name="maxNumObs"></param>
+        /// <param name="obsSize">Observation size</param>
+        /// <param name="maxNumObs">Max number of observations</param>
         /// <returns>`ObservationSpec` for variable-length observations.</returns>
         public static ObservationSpec VariableLength(int obsSize, int maxNumObs)
         {
@@ -90,10 +90,10 @@ namespace Unity.MLAgents.Sensors
         /// Construct an ObservationSpec for visual-like observations, e.g. observations
         /// with a height, width, and possible multiple channels.
         /// </summary>
-        /// <param name="height"></param>
-        /// <param name="width"></param>
-        /// <param name="channels"></param>
-        /// <param name="obsType"></param>
+        /// <param name="height">Height</param>
+        /// <param name="width">Width</param>
+        /// <param name="channels">Channels</param>
+        /// <param name="obsType">Observation type</param>
         /// <returns>`ObservationSpec` for visual-like observations</returns>
         public static ObservationSpec Visual(int channels, int height, int width, ObservationType obsType = ObservationType.Default)
         {
@@ -116,10 +116,10 @@ namespace Unity.MLAgents.Sensors
         /// Note that not all combinations of DimensionProperty may be supported by the trainer.
         /// shape and dimensionProperties must have the same size.
         /// </remarks>
-        /// <param name="shape"></param>
-        /// <param name="dimensionProperties"></param>
-        /// <param name="observationType"></param>
-        /// <exception cref="UnityAgentsException"></exception>
+        /// <param name="shape">Shape</param>
+        /// <param name="dimensionProperties">Dimension properties</param>
+        /// <param name="observationType">Observation type</param>
+        /// <exception cref="UnityAgentsException">Unity agents exception</exception>
         public ObservationSpec(
             InplaceArray<int> shape,
             InplaceArray<DimensionProperty> dimensionProperties,

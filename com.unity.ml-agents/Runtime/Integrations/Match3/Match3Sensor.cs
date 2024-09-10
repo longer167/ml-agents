@@ -8,8 +8,8 @@ namespace Unity.MLAgents.Integrations.Match3
     /// <summary>
     /// Delegate that provides integer values at a given (x,y) coordinate.
     /// </summary>
-    /// <param name="x"></param>
-    /// <param name="y"></param>
+    /// <param name="x">X</param>
+    /// <param name="y">Y</param>
     public delegate int GridValueProvider(int x, int y);
 
     /// <summary>

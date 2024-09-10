@@ -18,7 +18,7 @@ namespace Unity.MLAgents.SideChannels
         /// <summary>
         /// Construct an IncomingMessage from the byte array.
         /// </summary>
-        /// <param name="data"></param>
+        /// <param name="data">Byte array</param>
         public IncomingMessage(byte[] data)
         {
             m_Data = data;

@@ -19,11 +19,11 @@ namespace Unity.MLAgents.Integrations.Match3
         /// <summary>
         /// Create a Match3Actuator.
         /// </summary>
-        /// <param name="board"></param>
+        /// <param name="board">Board</param>
         /// <param name="forceHeuristic">Whether the inference action should be ignored and the Agent's Heuristic
         /// should be called. This should only be used for generating comparison stats of the Heuristic.</param>
         /// <param name="seed">The seed used to initialize <see cref="System.Random"/>.</param>
-        /// <param name="name"></param>
+        /// <param name="name">Name</param>
         public Match3Actuator(AbstractBoard board,
                               bool forceHeuristic,
                               int seed,

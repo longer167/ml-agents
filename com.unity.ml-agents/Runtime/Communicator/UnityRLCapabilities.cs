@@ -36,7 +36,7 @@ namespace Unity.MLAgents
 
         /// <summary>
         /// Will print a warning to the console if Python does not support base capabilities and will
-        /// return <value>true</value> if the warning was printed.
+        /// return true if the warning was printed.
         /// </summary>
         /// <returns>True if the warning was printed, False if not.</returns>
         public bool WarnOnPythonMissingBaseRLCapabilities()

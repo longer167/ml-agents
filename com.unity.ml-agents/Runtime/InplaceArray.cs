@@ -10,7 +10,7 @@ namespace Unity.MLAgents
     /// <remarks>
     /// This does not implement any interfaces such as IList, in order to avoid any accidental boxing allocations.
     /// </remarks>
-    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="T">T</typeparam>
     public struct InplaceArray<T> : IEquatable<InplaceArray<T>> where T : struct
     {
         private const int k_MaxLength = 4;
@@ -85,7 +85,7 @@ namespace Unity.MLAgents
         /// </summary>
         /// <param name="elems">The `IList` to construct the array from.</param>
         /// <returns>Corresponding `InplaceArray` from the input IList.</returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException">Argument out of range</exception>
         public static InplaceArray<T> FromList(IList<T> elems)
         {
             switch (elems.Count)
@@ -107,7 +107,7 @@ namespace Unity.MLAgents
         /// Per-element access.
         /// </summary>
         /// <param name="index">The index to get or set.</param>
-        /// <exception cref="IndexOutOfRangeException"></exception>
+        /// <exception cref="IndexOutOfRangeException">Index out of range</exception>
         public T this[int index]
         {
             get
@@ -171,7 +171,7 @@ namespace Unity.MLAgents
         /// Returns a string representation of the array's elements.
         /// </summary>
         /// <returns>The string summary of the `InplaceArray`.</returns>
-        /// <exception cref="IndexOutOfRangeException"></exception>
+        /// <exception cref="IndexOutOfRangeException">Index out of range</exception>
         public override string ToString()
         {
             switch (m_Length)

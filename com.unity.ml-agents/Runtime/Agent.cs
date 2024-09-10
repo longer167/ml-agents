@@ -687,7 +687,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Returns the current step counter (within the current episode).
         /// </summary>
-        /// <returns>The current step count.</returns>
+        /// <value>The current step count.</value>
         public int StepCount
         {
             get { return m_StepCount; }

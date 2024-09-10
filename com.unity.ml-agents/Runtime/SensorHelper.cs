@@ -77,8 +77,8 @@ namespace Unity.MLAgents.Sensors
         /// simplifying unit tests.
         /// </summary>
         /// <param name="sensor">`ISensor` to generate observation from.</param>
-        /// <param name="expected"></param>
-        /// <param name="errorMessage"></param>
+        /// <param name="expected">The expected observations.</param>
+        /// <param name="errorMessage">The error message to throw if sensor observation doesn't match.</param>
         /// <returns>True if the generated observation for the provided sensor equal the expected values, False if not.</returns>
         public static bool CompareObservation(ISensor sensor, float[,,] expected, out string errorMessage)
         {
