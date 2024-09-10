@@ -60,11 +60,17 @@ namespace Unity.MLAgents
         /// </summary>
         public int groupId;
 
+        /// <summary>
+        /// Clear stored actions.
+        /// </summary>
         public void ClearActions()
         {
             storedActions.Clear();
         }
 
+        /// <summary>
+        /// Copy actions.
+        /// </summary>
         public void CopyActions(ActionBuffers actionBuffers)
         {
             var continuousActions = storedActions.ContinuousActions;

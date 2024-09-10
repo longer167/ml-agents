@@ -10,6 +10,7 @@ namespace Unity.MLAgents.Integrations.Match3
     /// </summary>
     /// <param name="x">X</param>
     /// <param name="y">Y</param>
+    /// <returns>The integer value at the given (x,y) coordinate.</returns>
     public delegate int GridValueProvider(int x, int y);
 
     /// <summary>

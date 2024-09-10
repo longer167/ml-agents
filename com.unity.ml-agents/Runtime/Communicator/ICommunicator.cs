@@ -5,6 +5,9 @@ using Unity.MLAgents.Sensors;
 
 namespace Unity.MLAgents
 {
+    /// <summary>
+    /// Communicator initialization parameters.
+    /// </summary>
     public struct CommunicatorInitParameters
     {
         /// <summary>
@@ -32,6 +35,10 @@ namespace Unity.MLAgents
         /// </summary>
         public UnityRLCapabilities CSharpCapabilities;
     }
+
+    /// <summary>
+    /// Initialization parameters for the Unity environment.
+    /// </summary>
     public struct UnityRLInitParameters
     {
         /// <summary>
@@ -119,6 +126,9 @@ namespace Unity.MLAgents
     UnityOutput and UnityInput can be extended to provide functionalities beyond RL
     UnityRLOutput and UnityRLInput can be extended to provide new RL functionalities
      */
+    /// <summary>
+    /// Interface of the Communicators
+    /// </summary>
     public interface ICommunicator : IDisposable
     {
         /// <summary>

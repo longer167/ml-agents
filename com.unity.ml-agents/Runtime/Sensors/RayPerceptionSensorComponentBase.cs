@@ -127,6 +127,9 @@ namespace Unity.MLAgents.Sensors
             set { m_ObservationStacks = value; }
         }
 
+        /// <summary>
+        /// Disable to provide the rays in left to right order
+        /// </summary>
         [HideInInspector, SerializeField]
         [Tooltip("Disable to provide the rays in left to right order.  Warning: Alternating order will be deprecated, disable it to ensure compatibility with future versions of ML-Agents.")]
         public bool m_AlternatingRayOrder = true;
