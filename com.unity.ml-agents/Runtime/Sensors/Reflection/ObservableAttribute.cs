@@ -24,8 +24,10 @@ namespace Unity.MLAgents.Sensors.Reflection
     /// to fields or properties.
     /// </remarks>
     /// <example>
+    /// <para>
     /// This sample class will produce two observations, one for the m_Health field, and one
     /// for the HealthPercent property.
+    /// </para>
     /// <code>
     /// using Unity.MLAgents;
     /// using Unity.MLAgents.Sensors.Reflection;

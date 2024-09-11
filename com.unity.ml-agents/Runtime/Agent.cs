@@ -71,6 +71,7 @@ namespace Unity.MLAgents
         /// <summary>
         /// Copy actions.
         /// </summary>
+        /// <param name="actionBuffers">The ActionBuffers to copy from.</param>
         public void CopyActions(ActionBuffers actionBuffers)
         {
             var continuousActions = storedActions.ContinuousActions;
@@ -568,7 +569,7 @@ namespace Unity.MLAgents
         /// }
         /// </code>
         /// </example>
-        /// <see cref="OnEnable"/>
+        /// <seealso cref="OnEnable"/>
         protected virtual void OnDisable()
         {
             DemonstrationWriters.Clear();
@@ -799,8 +800,8 @@ namespace Unity.MLAgents
         /// This should be used when the episode can no longer continue, such as when the Agent
         /// reaches the goal or fails at the task.
         /// </remarks>
-        /// <see cref="OnEpisodeBegin"/>
-        /// <see cref="EpisodeInterrupted"/>
+        /// <seealso cref="OnEpisodeBegin"/>
+        /// <seealso cref="EpisodeInterrupted"/>
         public void EndEpisode()
         {
             EndEpisodeAndReset(DoneReason.DoneCalled);
@@ -815,8 +816,8 @@ namespace Unity.MLAgents
         /// This should be used when the episode could continue, but has gone on for
         /// a sufficient number of steps.
         /// </remarks>
-        /// <see cref="OnEpisodeBegin"/>
-        /// <see cref="EndEpisode"/>
+        /// <seealso cref="OnEpisodeBegin"/>
+        /// <seealso cref="EndEpisode"/>
         public void EpisodeInterrupted()
         {
             EndEpisodeAndReset(DoneReason.MaxStepReached);
@@ -948,11 +949,13 @@ namespace Unity.MLAgents
         /// [GameObject]: https://docs.unity3d.com/Manual/GameObjects.html
         /// </remarks>
         /// <example>
+        /// <para>
         /// The following example illustrates a `Heuristic()` function that provides WASD-style
         /// keyboard control for an agent that can move in two dimensions as well as jump. See
         /// [Input Manager] for more information about the built-in Unity input functions.
         /// You can also use the [Input System package], which provides a more flexible and
         /// configurable input system.
+        /// </para>
         /// <code>
         /// public override void Heuristic(in ActionBuffers actionsOut)
         /// {
@@ -967,7 +970,7 @@ namespace Unity.MLAgents
         /// </example>
         /// <param name="actionsOut">The <see cref="ActionBuffers"/> which contain the continuous and
         /// discrete action buffers to write to.</param>
-        /// <see cref="IActionReceiver.OnActionReceived"/>
+        /// <seealso cref="IActionReceiver.OnActionReceived"/>
         public virtual void Heuristic(in ActionBuffers actionsOut)
         {
             Debug.LogWarning("Heuristic method called but not implemented. Returning placeholder actions.");
@@ -1243,7 +1246,7 @@ namespace Unity.MLAgents
         ///
         /// [Agents - Actions]: https://github.com/Unity-Technologies/ml-agents/blob/release_21_docs/docs/Learning-Environment-Design-Agents.md#actions
         /// </remarks>
-        /// <see cref="IActionReceiver.OnActionReceived"/>
+        /// <seealso cref="IActionReceiver.OnActionReceived"/>
         public virtual void WriteDiscreteActionMask(IDiscreteActionMask actionMask) { }
 
         /// <summary>
@@ -1251,6 +1254,7 @@ namespace Unity.MLAgents
         /// on the provided action.
         /// </summary>
         /// <remarks>
+        /// <para>
         /// An action is passed to this function in the form of an  <see cref="ActionBuffers"/>.
         /// Your implementation must use the array to direct the agent's behavior for the
         /// current step.
@@ -1276,7 +1280,7 @@ namespace Unity.MLAgents
         /// When an agent uses discrete actions, the values in the ActionBuffers.DiscreteActions array
         /// are integers that each represent a specific, discrete action. For example,
         /// you could define a set of discrete actions such as:
-        ///
+        /// </para>
         /// <code>
         /// 0 = Do nothing
         /// 1 = Move one space left
@@ -1318,8 +1322,8 @@ namespace Unity.MLAgents
         /// Implement `OnEpisodeBegin()` to set up an Agent instance at the beginning
         /// of an episode.
         /// </summary>
-        /// <see cref="Initialize"/>
-        /// <see cref="EndEpisode"/>
+        /// <seealso cref="Initialize"/>
+        /// <seealso cref="EndEpisode"/>
         public virtual void OnEpisodeBegin() { }
 
         /// <summary>

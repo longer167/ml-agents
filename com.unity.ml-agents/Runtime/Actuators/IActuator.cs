@@ -8,7 +8,7 @@ namespace Unity.MLAgents.Actuators
         /// <summary>
         /// The specification of the actions for this IActuator.
         /// </summary>
-        /// <see cref="ActionSpec"/>
+        /// <seealso cref="ActionSpec"/>
         ActionSpec ActionSpec { get; }
 
         /// <summary>

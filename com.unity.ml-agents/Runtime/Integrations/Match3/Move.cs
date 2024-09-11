@@ -245,7 +245,7 @@ namespace Unity.MLAgents.Integrations.Match3
         /// Get the opposite direction of this move.
         /// </summary>
         /// <returns>Oposit `Direction` of this move.</returns>
-        /// <exception cref="ArgumentOutOfRangeException"></exception>
+        /// <exception cref="ArgumentOutOfRangeException">Argument out of range</exception>
         public Direction OtherDirection()
         {
             switch (Direction)

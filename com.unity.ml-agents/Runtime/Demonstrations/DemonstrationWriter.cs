@@ -9,7 +9,7 @@ namespace Unity.MLAgents.Demonstrations
     /// <summary>
     /// Responsible for writing demonstration data to stream (typically a file stream).
     /// </summary>
-    /// <see cref="DemonstrationRecorder"/>
+    /// <seealso cref="DemonstrationRecorder"/>
     public class DemonstrationWriter
     {
         /// <summary>

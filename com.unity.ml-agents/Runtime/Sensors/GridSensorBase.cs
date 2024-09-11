@@ -198,7 +198,9 @@ namespace Unity.MLAgents.Sensors
         ///         The buffer size is configured by <see cref="GetCellObservationSize"/>.
         /// </param>
         /// <example>
+        /// <para>
         ///   Here is an example of overriding GetObjectData to get the velocity of a potential Rigidbody:
+        /// </para>
         ///   <code>
         ///     protected override void GetObjectData(GameObject detectedObject, int tagIndex, float[] dataBuffer)
         ///     {

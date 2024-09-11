@@ -186,7 +186,7 @@ namespace Unity.MLAgents.Actuators
         ///
         /// [Agents - Actions]: https://github.com/Unity-Technologies/ml-agents/blob/release_21_docs/docs/Learning-Environment-Design-Agents.md#actions
         /// </remarks>
-        /// <see cref="IActionReceiver.OnActionReceived"/>
+        /// <seealso cref="IActionReceiver.OnActionReceived"/>
         void WriteDiscreteActionMask(IDiscreteActionMask actionMask);
     }
 }

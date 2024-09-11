@@ -36,6 +36,8 @@ namespace Unity.MLAgents
         /// <summary>
         /// Register a function that will create an ICommunicator instance.
         /// </summary>
+        /// <param name="creator">Creator</param>
+        /// <typeparam name="T">Type of communicator</typeparam>
         public static void Register<T>(Func<T> creator) where T : ICommunicator
         {
             s_Creator = () => creator();

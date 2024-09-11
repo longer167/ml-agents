@@ -148,6 +148,9 @@ namespace Unity.MLAgents.Sensors
             set { m_AlternatingRayOrder = value; }
         }
 
+        /// <summary>
+        /// Determines whether to use batched raycasts and the jobs system. Default = false.
+        /// </summary>
         [HideInInspector, SerializeField]
         [Tooltip("Enable to use batched raycasts and the jobs system.")]
         public bool m_UseBatchedRaycasts = false;
