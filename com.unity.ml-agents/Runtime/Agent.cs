@@ -135,15 +135,15 @@ namespace Unity.MLAgents
     /// component attached to the agent's [GameObject]. The <see cref="BehaviorType"/> setting
     /// determines how decisions are made:
     ///
-    /// * <see cref="BehaviorType.Default"/>: decisions are made by the external process,
-    ///   when connected. Otherwise, decisions are made using inference. If no inference model
-    ///   is specified in the BehaviorParameters component, then heuristic decision
-    ///   making is used.
-    /// * <see cref="BehaviorType.InferenceOnly"/>: decisions are always made using the trained
-    ///   model specified in the <see cref="BehaviorParameters"/> component.
-    /// * <see cref="BehaviorType.HeuristicOnly"/>: when a decision is needed, the agent's
-    ///   <see cref="Heuristic(in ActionBuffers)"/> function is called. Your implementation is responsible for
-    ///   providing the appropriate action.
+    /// <see cref="BehaviorType.Default"/>: decisions are made by the external process,
+    /// when connected. Otherwise, decisions are made using inference. If no inference model
+    /// is specified in the BehaviorParameters component, then heuristic decision
+    /// making is used.
+    /// <see cref="BehaviorType.InferenceOnly"/>: decisions are always made using the trained
+    /// model specified in the <see cref="BehaviorParameters"/> component.
+    /// <see cref="BehaviorType.HeuristicOnly"/>: when a decision is needed, the agent's
+    /// <see cref="Heuristic(in ActionBuffers)"/> function is called. Your implementation is responsible for
+    /// providing the appropriate action.
     ///
     /// To trigger an agent decision automatically, you can attach a <see cref="DecisionRequester"/>
     /// component to the Agent game object. You can also call the agent's <see cref="RequestDecision"/>
@@ -956,6 +956,8 @@ namespace Unity.MLAgents
         /// [Input Manager] for more information about the built-in Unity input functions.
         /// You can also use the [Input System package], which provides a more flexible and
         /// configurable input system.
+        /// [Input Manager]: https://docs.unity3d.com/Manual/class-InputManager.html
+        /// [Input System package]: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/index.html
         /// </para>
         /// <code>
         /// public override void Heuristic(in ActionBuffers actionsOut)
@@ -966,8 +968,6 @@ namespace Unity.MLAgents
         ///    continuousActionsOut[2] = Input.GetAxis("Vertical");
         /// }
         /// </code>
-        /// [Input Manager]: https://docs.unity3d.com/Manual/class-InputManager.html
-        /// [Input System package]: https://docs.unity3d.com/Packages/com.unity.inputsystem@1.0/manual/index.html
         /// </example>
         /// <param name="actionsOut">The <see cref="ActionBuffers"/> which contain the continuous and
         /// discrete action buffers to write to.</param>
@@ -1289,7 +1289,7 @@ namespace Unity.MLAgents
         /// 3 = Move one space up
         /// 4 = Move one space down
         /// </code>
-        ///
+        /// <para>
         /// When making a decision, the agent picks one of the five actions and puts the
         /// corresponding integer value in the ActionBuffers.DiscreteActions array. For example, if the agent
         /// decided to move left, the ActionBuffers.DiscreteActions parameter would be an array with
@@ -1313,6 +1313,7 @@ namespace Unity.MLAgents
         /// For more information about implementing agent actions see [Agents - Actions].
         ///
         /// [Agents - Actions]: https://github.com/Unity-Technologies/ml-agents/blob/release_21_docs/docs/Learning-Environment-Design-Agents.md#actions
+        /// </para>
         /// </remarks>
         /// <param name="actions">
         /// Struct containing the buffers of actions to be executed at this step.

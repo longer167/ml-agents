@@ -90,6 +90,7 @@ namespace Unity.MLAgents
     /// <param name="inputParams"></param>
     internal delegate void RLInputReceivedHandler(UnityRLInputParameters inputParams);
 
+    /// <summary>
     /**
     This is the interface of the Communicators.
     This does not need to be modified nor implemented to create a Unity environment.
@@ -126,8 +127,6 @@ namespace Unity.MLAgents
     UnityOutput and UnityInput can be extended to provide functionalities beyond RL
     UnityRLOutput and UnityRLInput can be extended to provide new RL functionalities
      */
-    /// <summary>
-    /// Interface of the Communicators
     /// </summary>
     public interface ICommunicator : IDisposable
     {
