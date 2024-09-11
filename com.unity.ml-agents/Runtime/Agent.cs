@@ -244,6 +244,9 @@ namespace Unity.MLAgents
         /// training. If you set the max step value to a reasonable estimate of the time it should
         /// take to complete a task, then agents that haven’t succeeded in that time frame will
         /// reset and start a new training episode rather than continue to fail.
+        ///
+        /// **Note:** in general, you should limit the differences between the code you execute
+        /// during training and the code you run during inference.
         /// </remarks>
         /// <example>
         /// <para>
@@ -265,8 +268,6 @@ namespace Unity.MLAgents
         ///     }
         /// }
         /// </code>
-        /// **Note:** in general, you should limit the differences between the code you execute
-        /// during training and the code you run during inference.
         /// </example>
         [FormerlySerializedAs("maxStep")]
         [HideInInspector] public int MaxStep;
