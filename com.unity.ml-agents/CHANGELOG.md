@@ -953,4 +953,4 @@ vector observations to be used simultaneously. (#3981) Thank you @shakenes !
 
 ### This is the first release of _Unity Package ML-Agents_.
 
-_Short description of this release_
+ - Initial release.
