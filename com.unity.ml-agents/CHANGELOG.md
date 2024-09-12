@@ -7,7 +7,6 @@ and this project adheres to
 [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [3.0.0] - 2024-09-02
-
 ### Major Changes
 #### com.unity.ml-agents / com.unity.ml-agents.extensions (C#)
 - Upgraded to Sentis 2.0.0 (#6137)
