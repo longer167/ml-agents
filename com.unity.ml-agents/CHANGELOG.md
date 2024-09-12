@@ -86,7 +86,7 @@ versioned under `ml-agents-envs` package in the future (#)
 ### Minor Changes
 #### com.unity.ml-agents / com.unity.ml-agents.extensions (C#)
 - Added switch to RayPerceptionSensor to allow rays to be ordered left to right. (#26)
-	- Current alternating order is still the default but will be deprecated.
+    - Current alternating order is still the default but will be deprecated.
 - Added support for enabling/disabling camera object attached to camera sensor in order to improve performance. (#31)
 
 #### ml-agents / ml-agents-envs
