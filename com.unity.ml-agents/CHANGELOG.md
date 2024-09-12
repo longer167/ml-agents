@@ -10,6 +10,7 @@ and this project adheres to
 
 ### Major Changes
 #### com.unity.ml-agents / com.unity.ml-agents.extensions (C#)
+- Upgraded to Sentis 2.0.0 (#6137)
 - Upgraded to Sentis 1.3.0-pre.3 (#6070)
 - Upgraded to Sentis 1.3.0-exp.2 (#6013)
 - The minimum supported Unity version was updated to 2023.2. (#6071)
@@ -22,13 +23,20 @@ and this project adheres to
 - Added no-graphics-monitor. (#6014)
 
 #### ml-agents / ml-agents-envs
+- Update Installation.md (#6004)
+- Updated Using-Virtual-Environment.md (#6033)
 
 ### Bug Fixes
 #### com.unity.ml-agents / com.unity.ml-agents.extensions (C#)
+- Fix failing ci post upgrade (#6141)
+- Fixed missing assembly reference for google protobuf. (#6099)
 - Fixed missing tensor Dispose in ModelRunner. (#6028)
 - Fixed 3DBall sample package to remove Barracuda dependency. (#6030)
 
 #### ml-agents / ml-agents-envs
+- Fix sample code indentation in migrating.md (#5840)
+- Fixed continuous integration tests (#6079)
+- Fixed bad like format (#6078)
 - Bumped numpy version to >=1.23.5,<1.24.0 (#6082)
 - Bumped onnx version to 1.15.0 (#6062)
 - Bumped protobuf version to >=3.6,<21 (#6062)
