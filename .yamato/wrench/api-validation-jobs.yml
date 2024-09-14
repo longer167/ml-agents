@@ -37,11 +37,11 @@ api_validation_-_ml-agents_-_2023_2_-_windows:
   dependencies:
   - path: .yamato/wrench/package-pack-jobs.yml#package_pack_-_ml-agents
   variables:
-    UPMPVP_CONTEXT_WRENCH: 0.10.4.0
+    UPMPVP_CONTEXT_WRENCH: 0.10.5.0
   triggers:
     expression: push.branch match "^release/.*"
     cancel_old_ci: true
   metadata:
     Job Maintainers: '#rm-packageworks'
-    Wrench: 0.10.4.0
+    Wrench: 0.10.5.0
 
