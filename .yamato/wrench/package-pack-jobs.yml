@@ -22,7 +22,7 @@ package_pack_-_ml-agents:
       paths:
       - upm-ci~/packages/**/*
   dependencies:
-      -   path: .yamato/standalone-build-test.yml#test_linux_standalone_2023.2_gym
+      -   path: .yamato/com.unity.ml-agents-test.yml#test_com.unity.ml-agents_mac_2023.2_Project
 
   variables:
     UPMCI_ACK_LARGE_PACKAGE: 1
