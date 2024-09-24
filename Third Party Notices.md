@@ -5,6 +5,8 @@ This package contains third-party software components governed by the license(s)
 
  License Type: MIT
 
+https://www.nuget.org/packages/System.Buffers/
+
  The MIT License (MIT)
 
  Copyright (c) .NET Foundation and Contributors
@@ -36,6 +38,8 @@ Component Name: System.Numerics.Vectors.dll
 
 License Type: MIT
 
+https://www.nuget.org/packages/System.Numerics.Vectors/
+
 The MIT License (MIT)
 
 Copyright (c) .NET Foundation and Contributors
@@ -65,6 +69,8 @@ SOFTWARE.
 Component Name: System.Runtime.CompilerServices.Unsafe
 
 License Type: MIT
+
+https://www.nuget.org/packages/System.Runtime.CompilerServices.Unsafe
 
 The MIT License (MIT)
 
@@ -96,6 +102,8 @@ Component Name: System.Memory.dll
 
 License Type: MIT
 
+https://www.nuget.org/packages/System.Memory/
+
 The MIT License (MIT)
 
 Copyright (c) .NET Foundation and Contributors
@@ -125,6 +133,8 @@ SOFTWARE.
 Component Name: System.IO.Abstractions
 
 License Type: MIT
+
+https://github.com/TestableIO/System.IO.Abstractions
 
 The MIT License (MIT)
 
@@ -156,6 +166,8 @@ Component Name: System.Interactive.Async.dll
 
 License Type: Apache-2.0
 
+https://www.nuget.org/packages/System.Interactive.Async/
+
 Copyright (c) .NET Foundation and Contributors
 All Rights Reserved
 
@@ -177,6 +189,21 @@ Component Name: Grpc
 
 License Type: Apache-2.0
 
+https://github.com/grpc/grpc
+
+Copyright 2015-2024 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 
                                  Apache License
                            Version 2.0, January 2004
