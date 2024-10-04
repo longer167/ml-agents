@@ -87,7 +87,7 @@ def set_version(
         if csharp_extensions_version is not None:
             # since this has never been promoted we need to keep
             # it in preview forever or CI will fail
-            extension_version = f"{csharp_extensions_version}-exp.1"
+            extension_version = f"{csharp_extensions_version}-preview"
         print(
             f"Setting package version to {package_version} in {MLAGENTS_PACKAGE_JSON_PATH}"
             f" and {MLAGENTS_EXTENSIONS_PACKAGE_JSON_PATH}"
