@@ -1,6 +1,6 @@
 # Unity ML-Agents Toolkit
 
-[![docs badge](https://img.shields.io/badge/docs-reference-blue.svg)](https://github.com/Unity-Technologies/ml-agents/tree/release_21_docs/docs/)
+[![docs badge](https://img.shields.io/badge/docs-reference-blue.svg)](https://github.com/Unity-Technologies/ml-agents/tree/release_22_docs/docs/)
 
 [![license badge](https://img.shields.io/badge/license-Apache--2.0-green.svg)](../LICENSE.md)
 
@@ -68,7 +68,7 @@ under active development and may be unstable. A few helpful guidelines:
 |        **Version**         | **Release Date** | **Source** | **Documentation** | **Download** | **Python Package** | **Unity Package** |
 |:--------------------------:|:------:|:-------------:|:-------:|:------------:|:------------:|:------------:|
 | **develop (unstable)** | -- | [source](https://github.com/Unity-Technologies/ml-agents/tree/develop) | [docs](https://unity-technologies.github.io/ml-agents/) | [download](https://github.com/Unity-Technologies/ml-agents/archive/develop.zip) | -- | -- |
-| **Release 21** | **October 9, 2023** | **[source](https://github.com/Unity-Technologies/ml-agents/tree/release_21)** | **[docs](https://unity-technologies.github.io/ml-agents/)** | **[download](https://github.com/Unity-Technologies/ml-agents/archive/release_21.zip)** | **[1.0.0](https://pypi.org/project/mlagents/1.0.0/)** | **[3.0.0](https://docs.unity3d.com/Packages/com.unity.ml-agents@3.0/manual/index.html)** |
+| **Release 21** | **October 9, 2023** | **[source](https://github.com/Unity-Technologies/ml-agents/tree/release_22)** | **[docs](https://unity-technologies.github.io/ml-agents/)** | **[download](https://github.com/Unity-Technologies/ml-agents/archive/release_22.zip)** | **[1.0.0](https://pypi.org/project/mlagents/1.0.0/)** | **[3.0.0](https://docs.unity3d.com/Packages/com.unity.ml-agents@3.0/manual/index.html)** |
 
 
 If you are a researcher interested in a discussion of Unity as an AI platform,
