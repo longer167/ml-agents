@@ -25,7 +25,8 @@ __release_tag__ = {release_tag}
 
 def _escape_non_none(s: Optional[str]) -> str:
     """
-    Returns s escaped in quotes if it is non-None, else "None"
+    Returns s escaped in quotes if it is non-None, els e "None"
+    Returns s escaped in quotes if it is non-None, els e "None"
     :param s:
     :return:
     """
@@ -81,7 +82,9 @@ def set_version(
             f.write(new_contents)
 
     if csharp_version is not None:
-        package_version = f"{csharp_version}-exp.1"
+        # removed exp.1 tag from version strings since MLA package is a supported package again
+        # package_version = f"{csharp_version}-exp.1"
+        package_version = f"{csharp_version}"
         if csharp_extensions_version is not None:
             # since this has never been promoted we need to keep
             # it in preview forever or CI will fail
@@ -178,7 +181,7 @@ if __name__ == "__main__":
             print(f"Updating C# package to version {args.csharp_version}")
         if args.csharp_extensions_version:
             print(
-                f"Updating C# extensions package to version {args.csharp_extensions_version}"
+                f"Updating C# extensions package to version {args.csharp_extensions_version}-exp.1"
             )
         set_version(
             args.python_version,
