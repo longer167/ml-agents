@@ -22,7 +22,7 @@
     
     
       
-        <title>About ML-Agents package (com.unity.ml-agents) - Unity ML-Agents Toolkit</title>
+        <title>ML-Agents Overview - Unity ML-Agents Toolkit</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#about-ml-agents-package-comunityml-agents" class="md-skip">
+        <a href="#ml-agents-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              About ML-Agents package (com.unity.ml-agents)
+              ML-Agents Overview
             
           </span>
         </div>
@@ -953,6 +953,24 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#capabilities" class="md-nav__link">
+    <span class="md-ellipsis">
+      Capabilities
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#special-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special Notes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#package-contents" class="md-nav__link">
     <span class="md-ellipsis">
       Package contents
@@ -965,54 +983,6 @@
   <a href="#installation" class="md-nav__link">
     <span class="md-ellipsis">
       Installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#advanced-installation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Advanced Installation
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Advanced Installation">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#github-via-package-manager" class="md-nav__link">
-    <span class="md-ellipsis">
-      Github via Package Manager
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#local-installation-for-development" class="md-nav__link">
-    <span class="md-ellipsis">
-      Local Installation for Development
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#requirements" class="md-nav__link">
-    <span class="md-ellipsis">
-      Requirements
     </span>
   </a>
   
@@ -1064,24 +1034,15 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#unity-inference-engine-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      Unity Inference Engine Models
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#helpful-links" class="md-nav__link">
+  <a href="#additional-resources" class="md-nav__link">
     <span class="md-ellipsis">
-      Helpful links
+      Additional Resources
     </span>
   </a>
   
@@ -1105,35 +1066,20 @@
   
 
 
-<h1 id="about-ml-agents-package-comunityml-agents">About ML-Agents package (<code>com.unity.ml-agents</code>)</h1>
-<p>The <em>ML-Agents</em> package contains the primary C# SDK for the <a href="https://github.com/Unity-Technologies/ml-agents">Unity ML-Agents
-Toolkit</a>.</p>
-<p>The package allows you to convert any Unity scene into a learning environment
-and train character behaviors using a variety of machine learning algorithms.
-Additionally, it allows you to embed these trained behaviors back into Unity
-scenes to control your characters. More specifically, the package provides the
-following core functionalities:</p>
+<h1 id="ml-agents-overview">ML-Agents Overview</h1>
+<p>ML-agents enable games and simulations to serve as environments for training intelligent agents in Unity. Training can be done with reinforcement learning, imitation learning, neuroevolution, or any other methods. Trained agents can be used for many use cases, including controlling NPC behavior (in a variety of settings such as multi-agent and adversarial), automated testing of game builds and evaluating different game design decisions pre-release.</p>
+<p>The <em>ML-Agents</em> package has a C# SDK for the [Unity ML-Agents Toolkit], which can be used outside of Unity. The scope of these docs is just to get started in the context of Unity, but further details and samples are located on the <a href="https://unity-technologies.github.io/ml-agents/">github docs</a>.</p>
+<h2 id="capabilities">Capabilities</h2>
+<p>The package allows you to convert any Unity scene into a learning environment and train character behaviors using a variety of machine-learning algorithms. Additionally, it allows you to embed these trained behaviors back into Unity scenes to control your characters. More specifically, the package provides the following core functionalities:</p>
 <ul>
-<li>Define Agents: entities, or characters, whose behavior will be learned. Agents
-  are entities that generate observations (through sensors), take actions, and
-  receive rewards from the environment.</li>
-<li>Define Behaviors: entities that specify how an agent should act. Multiple
-  agents can share the same Behavior and a scene may have multiple Behaviors.</li>
-<li>Record demonstrations of an agent within the Editor. You can use
-  demonstrations to help train a behavior for that agent.</li>
-<li>Embedding a trained behavior into the scene via the <a href="https://docs.unity3d.com/Packages/com.unity.sentis@latest/index.html">Unity Inference Engine</a>.
-  Embedded behaviors allow you to switch an Agent between learning and
-  inference.</li>
+<li>Define Agents: entities, or characters, whose behavior will be learned. Agents are entities that generate observations (through sensors), take actions, and receive rewards from the environment.</li>
+<li>Define Behaviors: entities that specify how an agent should act. Multiple agents can share the same Behavior and a scene may have multiple Behaviors.</li>
+<li>Record demonstrations: To show the behaviors of an agent within the Editor. You can use demonstrations to help train a behavior for that agent.</li>
+<li>Embed a trained behavior (aka: run your ML model) in the scene via the <a href="https://docs.unity3d.com/Packages/com.unity.sentis@2.1/manual/index.html">Unity Sentis</a> inference engine. Embedded behaviors allow you to switch an Agent between learning and inference.</li>
 </ul>
-<p>Note that the <em>ML-Agents</em> package does not contain the machine learning
-algorithms for training behaviors. The <em>ML-Agents</em> package only supports
-instrumenting a Unity scene, setting it up for training, and then embedding the
-trained model back into your Unity scene. The machine learning algorithms that
-orchestrate training are part of the companion <a href="https://github.com/Unity-Technologies/ml-agents">Python package</a>.</p>
-<p>Note that we also provide an <em>ML-Agents Extensions</em> package
-(<code>com.unity.ml-agents.extensions</code>) that contains early/experimental features
-that you may find useful. This package is only available from the <a href="https://github.com/Unity-Technologies/ml-agents/blob/release_21_docs/com.unity.ml-agents.extensions">ML-Agents
-GitHub repo</a>.</p>
+<h2 id="special-notes">Special Notes</h2>
+<p>Note that the ML-Agents package does not contain the machine learning algorithms for training behaviors. The ML-Agents package only supports instrumenting a Unity scene, setting it up for training, and then embedding the trained model back into your Unity scene. The machine learning algorithms that orchestrate training are part of the companion <a href="https://github.com/Unity-Technologies/ml-agents">python package</a>.
+Note that we also provide an ML-Agents Extensions package (<code>com.unity.ml-agents.extensions</code>) that contains early/experimental features that you may find useful. This package is only available from the <a href="https://github.com/Unity-Technologies/ml-agents/blob/release_22_docs/com.unity.ml-agents.extensions">ML-Agents GitHub repo</a>.</p>
 <h2 id="package-contents">Package contents</h2>
 <p>The following table describes the package folder structure:</p>
 <table>
@@ -1172,33 +1118,15 @@ GitHub repo</a>.</p>
 </table>
 <p><a name="Installation"></a></p>
 <h2 id="installation">Installation</h2>
-<p>To install this <em>ML-Agents</em> package, follow the instructions in the <a href="https://docs.unity3d.com/Manual/upm-ui-install.html">Package
-Manager documentation</a>.</p>
-<p>To install the companion Python package to enable training behaviors, follow the
-<a href="https://github.com/Unity-Technologies/ml-agents/blob/release_21_docs/docs/Installation.md">installation instructions</a> on our <a href="https://github.com/Unity-Technologies/ml-agents">GitHub repository</a>.</p>
-<h3 id="advanced-installation">Advanced Installation</h3>
-<p>With the changes to Unity Package Manager in 2021, experimental packages will not show up in the package list and have to be installed manually. There are two recommended ways to install the package manually:</p>
-<h4 id="github-via-package-manager">Github via Package Manager</h4>
-<p>In Unity 2019.4 or later, open the Package Manager, hit the "+" button, and select "Add package from git URL".</p>
-<p><img alt="Package Manager git URL" src="https://github.com/Unity-Technologies/ml-agents/blob/release_21_docs/docs/images/unity_package_manager_git_url.png" /></p>
-<p>In the dialog that appears, enter</p>
-<pre><code>git+https://github.com/Unity-Technologies/ml-agents.git?path=com.unity.ml-agents#release_21
-</code></pre>
-<p>You can also edit your project's <code>manifest.json</code> directly and add the following line to the <code>dependencies</code>
-section:</p>
-<pre><code>&quot;com.unity.ml-agents&quot;: &quot;git+https://github.com/Unity-Technologies/ml-agents.git?path=com.unity.ml-agents#release_21&quot;,
-</code></pre>
-<p>See <a href="https://docs.unity3d.com/Manual/upm-git.html#subfolder">Git dependencies</a> for more information. Note that this
-may take several minutes to resolve the packages the first time that you add it.</p>
-<h4 id="local-installation-for-development">Local Installation for Development</h4>
-<p><a href="https://github.com/Unity-Technologies/ml-agents/tree/release_21_docs/docs/Installation.md#clone-the-ml-agents-toolkit-repository-optional">Clone the repository</a> and follow the
-<a href="https://github.com/Unity-Technologies/ml-agents/tree/release_21_docs/docs/Installation.md#advanced-local-installation-for-development-1">Local Installation for Development</a> directions.</p>
-<h2 id="requirements">Requirements</h2>
-<p>This version of the Unity ML-Agents package is compatible with the following
-versions of the Unity Editor:</p>
+<p>To add the ML-Agents package to a Unity project:</p>
 <ul>
-<li>2019.4 and later</li>
+<li>Create a new Unity project with Unity 2023.2 (or later) or open an existing one.</li>
+<li>To open the Package Manager, navigate to Window &gt; Package Manager.</li>
+<li>Click + and select Add package by name...</li>
+<li>Enter com.unity.ml-agents
+*Click Add to add the package to your project.</li>
 </ul>
+<p>To install the companion Python package to enable training behaviors, follow the <a href="https://github.com/Unity-Technologies/ml-agents/blob/release_22_docs/docs/Installation.md">installation instructions</a> on our <a href="https://github.com/Unity-Technologies/ml-agents">GitHub repository</a>.</p>
 <h2 id="known-limitations">Known Limitations</h2>
 <h3 id="training">Training</h3>
 <p>Training is limited to the Unity Editor and Standalone builds on Windows, MacOS,
@@ -1206,41 +1134,19 @@ and Linux with the Mono scripting backend. Currently, training does not work
 with the IL2CPP scripting backend. Your environment will default to inference
 mode if training is not supported or is not currently running.</p>
 <h3 id="inference">Inference</h3>
-<p>Inference is executed via the
-<a href="https://docs.unity3d.com/Packages/com.unity.sentis@latest/index.html">Unity Inference Engine</a>.</p>
-<p><strong>CPU</strong></p>
-<p>All platforms supported.</p>
-<p><strong>GPU</strong></p>
-<p>All platforms supported except:</p>
-<ul>
-<li>WebGL and GLES 3/2 on Android / iPhone</li>
-</ul>
-<p><strong>NOTE:</strong> Mobile platform support includes:</p>
-<ul>
-<li>Vulkan for Android</li>
-<li>Metal for iOS.</li>
-</ul>
+<p>Inference is executed via <a href="https://docs.unity3d.com/Packages/com.unity.sentis@latest/index.html">Unity Sentis</a> on the end-user device. Therefore, it is subject to the performance limitations of the end-user CPU or GPU. Also, only models created with our trainers are supported for running ML-Agents with a neural network behavior.</p>
 <h3 id="headless-mode">Headless Mode</h3>
-<p>If you enable Headless mode, you will not be able to collect visual observations
-from your agents.</p>
+<p>If you enable Headless mode, you will not be able to collect visual observations from your agents.</p>
 <h3 id="rendering-speed-and-synchronization">Rendering Speed and Synchronization</h3>
-<p>Currently the speed of the game physics can only be increased to 100x real-time.
-The Academy also moves in time with FixedUpdate() rather than Update(), so game
-behavior implemented in Update() may be out of sync with the agent decision
-making. See <a href="https://docs.unity3d.com/Manual/ExecutionOrder.html">Execution Order of Event Functions</a> for more information.</p>
-<p>You can control the frequency of Academy stepping by calling
-<code>Academy.Instance.DisableAutomaticStepping()</code>, and then calling
-<code>Academy.Instance.EnvironmentStep()</code></p>
-<h3 id="unity-inference-engine-models">Unity Inference Engine Models</h3>
-<p>Currently, only models created with our trainers are supported for running
-ML-Agents with a neural network behavior.</p>
-<h2 id="helpful-links">Helpful links</h2>
-<p>If you are new to the Unity ML-Agents package, or have a question after reading
-the documentation, you can checkout our <a href="https://github.com/Unity-Technologies/ml-agents">GitHub Repository</a>, which also includes
-a number of ways to <a href="https://github.com/Unity-Technologies/ml-agents#community-and-feedback">connect with us</a> including our <a href="https://forum.unity.com/forums/ml-agents.453/">ML-Agents Forum</a>.</p>
-<p>In order to improve the developer experience for Unity ML-Agents Toolkit, we have added in-editor analytics.
-Please refer to "Information that is passively collected by Unity" in the
-<a href="https://unity3d.com/legal/privacy-policy">Unity Privacy Policy</a>.</p>
+<p>Currently the speed of the game physics can only be increased to 100x real-time. The Academy (the sentinel that controls the stepping of the game to make sure everything is synchronized, from collection of observations to applying actions generated from policy inference to the agent) also moves in time with <code>FixedUpdate()</code> rather than <code>Update()</code>, so game behavior implemented in Update() may be out of sync with the agent decision-making.  See <a href="https://docs.unity3d.com/Manual/ExecutionOrder.html">Execution Order of Event Functions</a> for more information.</p>
+<p>You can control the frequency of Academy stepping by calling <code>Academy.Instance.DisableAutomaticStepping()</code>, and then calling <code>Academy.Instance.EnvironmentStep()</code>.</p>
+<h2 id="additional-resources">Additional Resources</h2>
+<ul>
+<li><a href="https://github.com/Unity-Technologies/ml-agents">GitHub repository</a></li>
+<li><a href="https://discussions.unity.com/tag/ml-agents">Unity Discussions</a></li>
+<li><a href="https://discord.com/channels/489222168727519232/1202574086115557446">Discord</a></li>
+<li><a href="https://unity-technologies.github.io/ml-agents/">Website</a></li>
+</ul>
 
 
 
