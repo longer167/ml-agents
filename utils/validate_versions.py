@@ -25,7 +25,7 @@ __release_tag__ = {release_tag}
 
 def _escape_non_none(s: Optional[str]) -> str:
     """
-    Returns s escaped in quotes if it is non-None, else "None"
+    Returns s escaped in quotes if it is non-None, els e "None"
     :param s:
     :return:
     """
@@ -180,7 +180,7 @@ if __name__ == "__main__":
             print(f"Updating C# package to version {args.csharp_version}")
         if args.csharp_extensions_version:
             print(
-                f"Updating C# extensions package to version {args.csharp_extensions_version}-exp.1"
+                f"Updating C# extensions package to version {args.csharp_extensions_version}-preview"
             )
         set_version(
             args.python_version,
